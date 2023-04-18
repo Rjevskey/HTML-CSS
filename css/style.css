@@ -1,0 +1,66 @@
+body{
+   font-family: 'Roboto', sans-serif;
+   margin: 0px 40px 0px 40px;
+
+}
+.logo{
+   width: 16.4px;
+   height: 9.08px;
+}
+.navig{
+   display:flex;
+   list-style-type: none;
+   text-align: center;
+   margin-right: 50px;
+   width: 100%;
+   height: 120px;
+}
+
+.zglvk{
+   color:#002203;
+   Font style: Regular;
+   font-size: 72px;
+   line-height: 64px;
+   line-height: 76%;
+   align: Left;
+   vertical-align: Top;
+   letter-spacing: 4.32px;
+}
+.menu{
+   list-style-type: none;
+   text-align: center;
+   margin-right: 50px;
+   width: 73px;
+   height: 18px;
+   color:#002203;
+}
+
+.stbild{
+   font-family: 'Roboto', sans-serif;
+   color: #FFFFFF;
+   width: 152px;
+   height: 36px;
+   padding: 20px 10px;
+   background: #00780C;
+   border-radius: 50px;
+   text-align: center;
+   font-size: 15px;
+   line-height: 18px;
+   line-height: 102%;
+   border: none;
+   padding: 5px 2px 5px 5px;
+   margin: 0px 15px 0px 0px;
+}
+.stbild-fafafa {
+   font-family: 'Roboto', sans-serif;
+   color: #505038;
+   background: #F5F3EE;
+   font-size: 15px;
+   text-align: center;
+   width: 152px;
+   height: 36px;
+   border-radius: 50px;
+   border: none;
+   padding: 5px 2px 5px 5px;
+}
+
