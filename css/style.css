@@ -26,6 +26,13 @@ body{
    vertical-align: Top;
    letter-spacing: 4.32px;
 }
+
+.two-zglvk{
+   color:#002203;
+   font-size: 39px;
+   margin: 111px 0px 0px 40px;
+   font-weight:normal;
+}
 .menu{
    list-style-type: none;
    text-align: center;
@@ -64,3 +71,67 @@ body{
    padding: 5px 2px 5px 5px;
 }
 
+.footer-meny{
+background: #191610;
+color: #DAD5C6;
+height: 656px;
+width: 1200px;
+left: 0px;
+top: 4232px;
+border-radius: 0px;
+}
+
+.footer-zglvk{
+   font-size: 38px;
+   font-family: Roboto;
+   font-weight: 400;
+   line-height: 40px;
+   letter-spacing: 2px;
+   text-align: left;
+   margin: 3px 679px 0px 40px;
+}
+
+.footer-text{
+   font-size: 18px;
+   line-height: 28px;
+   height: 84px;
+   width: 478px;
+   left: 40px;
+   top: 4510px;
+   border-radius: 0px;
+   margin: 42px 0px 0px 40px;
+
+}
+
+.footer-spisok{
+   margin: 29px 0px 41px 40px;
+   font-size: 18px;
+}
+
+.stbild-footer{
+   color: #FFFFFF;
+   width: 152px;
+   height: 36px;
+   padding: 20px 10px;
+   background: #00780C;
+   border-radius: 50px;
+   text-align: center;
+   font-size: 15px;
+   line-height: 18px;
+   line-height: 102%;
+   border: none;
+   padding: 5px 2px 5px 5px;
+   margin: 0px 15px 136px 40px;
+}
+.zglvk-green-footer{
+   color:#00780C;
+   font-size: 18px;
+   margin: 125px 900px 0px 40px;
+   font-weight:normal;
+}
+
+..zglvk-green{
+   color:#00780C;
+   font-size: 18px;
+   margin: 0px 0px 0px 0px;
+}
