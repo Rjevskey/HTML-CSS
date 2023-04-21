@@ -3,28 +3,29 @@ body{
    margin: 0px 40px 0px 40px;
 }
 
-.logo{
-   width: 16.4px;
-   height: 9.08px;
-}
-
 .navig{
    display:flex;
    list-style-type: none;
    text-align: center;
    margin-right: 50px;
-   width: 100%;
-   height: 120px;
+   width: 593px;
+   height: 192px;
 }
 
 .zglvk{
    color:#002203;
    font-style: Regular;
    font-size: 72px;
+   font-weight:normal;
    line-height: 64px;
    line-height: 76%;
    vertical-align: Top;
    letter-spacing: 4.32px;
+   margin: 208px 1070px 14px 40px;
+}
+
+.phone{
+   
 }
 
 .two-zglvk{
