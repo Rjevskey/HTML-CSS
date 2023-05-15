@@ -3,29 +3,66 @@
 /* Footer */
 
 /* 1. Header */
+
+/* У браузеров есть свои стили по умолчанию, https://meyerweb.com/eric/tools/css/reset/ посмотри эту ссылку или погугли "reset css". Для наглядности закоменти следующий класс и посмотри отличия */
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 18px;
   color: #423f35;
   background-color: #ffffff;
 }
 
+/* Контейнер который обсуждали, общий для всего приложения, где он нужен - добавляем его */
+
+.main-container {
+  padding: 0 10px;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1400px;
+}
+
 .navig {
   display: flex;
+  /* т.к. мы обсудили что у нас 2 блока в хедере лучше для задать слудующее свойство для flex*/
+  width: 100%;
+  justify-content: space-between;
+  /* свойство выше говорит о том чтобы мы взяли все наши элементы внутри flex контейнера и равномерно распределили на всю доступную ширину */
+  /* добавим свойство ниже чтобы они не слиплись, как собаки, если экран маленький (прочитай про это свойство) */
+  column-gap: 10px;
   list-style-type: none;
   text-align: center;
-  margin-right: 50px;
-  width: 100%;
-  height: 18px;
+  /* margin-right: 50px; бесполезное свойство в данной ситуации */
+  /* height: 18px; не нужно указывать высоту блока в обчных блоках, за счёт padding и элементов он сам будет нужной высоты  */
+  padding: 30px 0;
+}
+
+.nav-links {
+  display: flex;
+  column-gap: 52px;
+}
+
+.nav-buttons {
+  display: flex;
+  column-gap: 22px;
 }
 
 .menu {
   list-style-type: none;
   text-align: center;
-  margin-right: 50px;
-  width: 73px;
-  height: 18px;
+  /* опять же размеры тут излишни, всё контролирует наш родительсткий контейнер, так же можно не задавать margin-right, так как расстояние между элементами меню мы теперь контролируем с помощью свойства column-gap у родителя-контейнера. Это большой плюс, так как теперь у нас "чистый" класс который мы можем переиспользовать где угодно */
+  /* margin-right: 50px; */
+  /* width: 73px;
+  height: 18px; */
   color: #002203;
+}
+/* задал стили для лого отдельно */
+.logo {
+  margin-right: 50px;
 }
 
 .menu_dev {
@@ -38,7 +75,7 @@ body {
 }
 
 .stbild {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: #ffffff;
   width: 152px;
   height: 36px;
@@ -55,7 +92,7 @@ body {
 }
 
 .stbild_main {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: #ffffff;
   width: 152px;
   height: 36px;
@@ -72,7 +109,7 @@ body {
 }
 
 .stbild-fafafa {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: #505038;
   background: #f5f3ee;
   font-size: 15px;
@@ -84,28 +121,44 @@ body {
   padding: 5px 2px 5px 5px;
 }
 
+.first {
+  margin-top: 200px;
+  /* задаём свойство ниже, чтобы наша картинка через position: absolute позиционировалась относительно этого блока(советую загуглить и почитать всё о position) */
+  position: relative;
+}
+
+.first-info {
+  /* я использовал max-width: для того чтобы не задавать жёстко ширину через width, так как при размере экрана меньшем чем 593(например мобила он просто не войдётся), я так он сожмётся и будет хоть как-то работать */
+  max-width: 593px;
+}
+
 .zglvk {
   color: #002203;
-  font-style: Regular;
+  /* font-style: Regular; */
   font-size: 72px;
   font-weight: normal;
+  /* будет работать только один line-height и котороый написан последним, так делать не надо, нужно выбрать одно */
   line-height: 64px;
-  line-height: 76%;
+  line-height: 89%;
   vertical-align: Top;
   letter-spacing: 4.32px;
-  margin: 208px 1070px 14px 40px;
+  /* так делать не надо, тебе будет не сделать адаптив, если будешь всё так задавать */
+  /* margin: 208px 1070px 14px 40px; */
 }
 
 .phone {
   position: absolute;
-  left: 240px;
-  top: 50px;
+  /* тут правильно указано position: absolute, но нам нужно прижать картинку к правому краю, а это значит нужно указать right: 0; с верхним нужно поиграться */
+  right: 0;
+  /* т.к. картинка оказалась максимально уёбской и с отступами я сделал отризательное значение, в идеале вырезать её нормально через какую-то прогрумму */
+  top: -200px;
 }
 
 .text_header {
   width: 424px;
   height: 84px;
-  margin: 14px 500px 38px 40px;
+  /* отступ по бокам больше не нужен */
+  margin: 14px 0 38px 0;
   font-size: 18px;
   color: #423f35;
 }
@@ -123,21 +176,21 @@ body {
 .main_theme {
   color: #00780c;
   font-size: 18px;
-  margin: 180px 1040px 3px 40px;
+  margin: 180px 1040px 3px 0;
   font-weight: normal;
 }
 
 .two-zglvk {
   color: #002203;
   font-size: 39px;
-  margin: 0 509px 74px 40px;
+  margin: 0 509px 74px 0;
   font-weight: normal;
 }
 
 .baza-text {
   column-width: 470px;
   column-count: 5;
-  margin: 0 107px 0 40px;
+  margin: 0 107px 0 0;
   font-size: 18px;
   text-align: left;
 }
@@ -163,7 +216,7 @@ body {
 }
 
 .stbild-center-green {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: #ffffff;
   width: 152px;
   height: 36px;
@@ -180,7 +233,7 @@ body {
 }
 
 .stbild-fafafa-center {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: #505038;
   background: #f5f3ee;
   font-size: 15px;
@@ -230,7 +283,7 @@ body {
 }
 
 .main-button-products {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: #505038;
   width: 152px;
   height: 36px;
@@ -271,7 +324,7 @@ body {
 }
 
 .main-button-products2 {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: #505038;
   width: 152px;
   height: 36px;
@@ -307,19 +360,18 @@ body {
   height: 80px;
 }
 
-.main-overview-products-three{
-display: grid;
-grid-template-columns: 1fr 1fr;
-grid-template-rows: auto;
-align-items: stretch;
+.main-overview-products-three {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  align-items: stretch;
 }
-
 
 .main-img-products-three {
   width: 100%;
   height: 100%;
 
-   /* position: absolute;
+  /* position: absolute;
   top: 3553px;
   left: 536px;  */
 }
@@ -328,10 +380,10 @@ align-items: stretch;
   margin: 0 797px 41px 40px;
   width: 100%;
   height: 100%;
-} 
+}
 
 .main-button-products-three {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: #505038;
   width: 100%;
   height: 100%;
@@ -353,10 +405,9 @@ align-items: stretch;
   font-weight: normal;
 }
 
-
-.footer-background{
+.footer-background {
   background: #191610;
-  
+
   padding: 125px 135px;
   width: 1200px;
   height: 656px;
@@ -393,7 +444,7 @@ align-items: stretch;
 
 .footer-list {
   margin: 29px 817px 0px 40px;
-  
+
   font-size: 15px;
 }
 
